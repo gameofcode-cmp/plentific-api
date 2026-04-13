@@ -6,19 +6,6 @@ namespace Christo\PlentificApi\Dto;
 
 use JsonSerializable;
 
-/**
- * @implements JsonSerializable<array{
- *     users:list<array{
- *         id:int,
- *         firstName:string,
- *         lastName:string,
- *         email:string
- *     }>,
- *     total:int,
- *     skip:int,
- *     limit:int
- * }>
- */
 final readonly class UserPagination implements JsonSerializable
 {
     /**

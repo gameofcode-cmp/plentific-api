@@ -5,14 +5,6 @@ namespace Christo\PlentificApi\Dto;
 
 use JsonSerializable;
 
-/**
- * @implements JsonSerializable<array{
- *     id:int,
- *     firstName:string,
- *     lastName:string,
- *     email:string
- * }>
- */
 final readonly class User implements JsonSerializable
 {
     public function __construct(
