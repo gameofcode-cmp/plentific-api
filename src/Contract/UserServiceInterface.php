@@ -11,8 +11,6 @@ use Christo\PlentificApi\Dto\UserPagination;
 interface UserServiceInterface
 {
     public function getUserById(int $id): User;
-
     public function getUsers(int $limit = 30, int $skip = 0): UserPagination;
-
     public function createUser(CreateUserRequest $request): int;
 }
