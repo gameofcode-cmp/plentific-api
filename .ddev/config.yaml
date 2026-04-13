@@ -1,4 +1,4 @@
-name: plentific-api
+name: christo/plentific-api
 type: php
 docroot: ""
 php_version: "8.4"
