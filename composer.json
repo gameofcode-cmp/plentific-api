@@ -6,7 +6,8 @@
     "version": "1.0.0",
     "autoload": {
         "psr-4": {
-            "Christo\\PlentificApi\\": "src/"
+            "Christo\\PlentificApi\\": "src/",
+            "Christo\\PlentificApi\\Dto\\": "src/dto/"
         }
     },
     "autoload-dev": {
