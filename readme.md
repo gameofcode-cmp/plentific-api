@@ -24,7 +24,7 @@ Returned data is mapped to typed DTOs that implement `JsonSerializable` and prov
 
 The service does not expose raw HTTP client exceptions directly.
 
-It throws package-level exceptions:
+The following exceptions are thrown:
 
 - `NetworkException` for transport-level failures
 - `InvalidApiResponseException` for malformed payloads
@@ -32,14 +32,18 @@ It throws package-level exceptions:
 - `UserCreationException` for create-user failures
 - `ApiException` for unexpected non-2xx responses
 
+
 This keeps consumer code explicit and easier to reason about in higher layers.
 
 ## Testing Strategy
 
-- **Unit tests** validate mapping, request/response handling, and exception behavior with mocked HTTP clients.
+- **Unit tests** validate mapping, request/response handling, and exception behavior with mocked HTTP clients so work if API is offline.
 - **Integration tests** call the real DummyJSON API to validate the package against real remote behavior.
 
-Because integration tests depend on a third-party API, unit tests are the reliable baseline and should be treated as the main regression safety net.
+```
+composer test #runs just local mocked tests
+composer test:integration #runs against real api
+```
 
 ## Development Setup
 
